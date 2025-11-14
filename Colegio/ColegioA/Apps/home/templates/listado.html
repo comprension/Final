@@ -1,0 +1,18 @@
+    {% extends 'base.html' %}
+    {% block contenido %}
+
+    <h1>Listado de Datos </h1>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Nombre</td>
+            <td>Apellido</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ivan</td>
+            <td>de Leon</td>
+        </tr>
+    </table>
+    <a href="{% url 'home:homeapp' %}">Home</a>
+    {% endblock %}

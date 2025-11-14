@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>Inicio</h2>
+<p>
+    Bienvenido al sitio del emprendimiento de ventas. Desde aquí se pueden administrar
+    las categorías y productos que se ofrecen.
+</p>
+
+<p>
+    <a class="btn btn-primary" href="{% url 'home:productos_listar' %}">Ver productos</a>
+    <a class="btn btn-secondary" href="{% url 'home:categorias_listar' %}">Ver categorías</a>
+</p>
+{% endblock %}

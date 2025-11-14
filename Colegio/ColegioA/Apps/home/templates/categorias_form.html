@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>{% if categoria %}Editar{% else %}Agregar{% endif %} categoría</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="id_nombre">Nombre</label>
+    <input type="text" id="id_nombre" name="nombre" required
+           value="{% if categoria %}{{ categoria.nombre }}{% endif %}">
+
+    <label for="id_descripcion">Descripción</label>
+    <textarea id="id_descripcion" name="descripcion">{% if categoria %}{{ categoria.descripcion }}{% endif %}</textarea>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a href="{% url 'home:categorias_listar' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
